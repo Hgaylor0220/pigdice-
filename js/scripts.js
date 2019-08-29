@@ -60,6 +60,7 @@ $(document).ready(function() {
      $(".player-console").show();
      $(".start-menu").hide();
 
+
     var player1Name = $(".player1Name").val();
     var player2Name = $(".player2Name").val();
 
@@ -81,12 +82,38 @@ $(document).ready(function() {
     $("#die-role-2").empty();
 
     $(".start-menue").show();
+    alert(player1Name);
   });
 
-  ("button#player1-roll").click(function(event){
-    player1.roll=roleDice();
-    $("#die-roll-1").text(player1.roll);
-    player1.rollone();
-    $("#round-total-1").text(player1.tempscore);
+    ("button#player1-roll").click(function(event){
+      player1.roll=roleDice();
+      $("#die-roll-1").text(player1.roll);
+      player1.rollone();
+      $("#round-total-1").text(player1.tempscore);
   });
-});
+
+    ("button#player2-roll").click(function(event){
+      player2.roll=roleDice();
+      $("#die-roll-2").text(player2.roll);
+      player2.rollone();
+      $("#round-total-2").text(player2.tempscore);
+  });
+
+    ("button#player1-hold").click(function(event){
+      player1.hold();
+      $("#total-score-1").text(player1.totalscore);
+      $("#round-total-1").empty();
+      $("#die-role-1").empty();
+      player1.winnercheck();
+    });
+
+
+    ("button#player2-hold").click(function(event){
+      player2.hold();
+      $("#total-score-2").text(player2.totalscore);
+      $("#round-total-2").empty();
+      $("#die-role-2").empty();
+      player2.winnercheck();
+
+    });
+  });

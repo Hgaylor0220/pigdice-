@@ -18,7 +18,7 @@
     <p>Rules of the game: Two player game, start by roling the dice! If you score 2-6 add the number on the die to your score. Between each role you have the option of role again or hold. If you score a 1 then it is the next players turn and no score is to be tallied</p>
 
     <h4>To begin, please enter your name and click start to begin. </h4>
-
+<!-- // Menue where you add user names -->
     <div class="start-menu container">
       <div class="jumbotron">
         <h1>Let's play Pig Dice!</h1>
@@ -37,23 +37,28 @@
           <button id="start" class="btn-info btn">Start</button>
       </div>
     </div>
-    <div class="col-sm-6">
+    <div class="player-console container">
+      <button id= "new-game" class ="btn success btn"> New Game</button>
+        <div class="row">
+          <div class="col-sm-6">
+            <h2>Player1:<span="player1Name"></span></h2>
+            <button id="player1-roll" class="btn-success btn">Roll</button>
+            <button id="player1-hold" class="btn-success btn">Hold</button>
+            <h2>Dice Roll: <span id="die-roll-1"></span></h2>
+            <p>Round Total: <span id="round-total-1"></span></p>
+            <p>Total Score: <span id="total-score-1"></span></p>
+          </div>
 
-    <label for="player2role"><span="player2Name"></span></label>
-    <button type="button" id ="player1Role" name="button">Role!</button>
-    <button type="button" class="player1Hold" name="button">Ehh Ill Hold</button>
+          
+          <div class="col-md-6">
+             <h2>Player 2: <span id = "player2Name"><span></h2>
+               <button id="player2-roll" class="btn-success btn">Roll</button>
+               <button id="player2-hold" class="btn-success btn">Hold</button>
+               <h2>Dice Roll: <span id="die-roll-2"></span></h2>
+               <p>Round Total: <span id="round-total-2"></span></p>
+               <p>Total Score: <span id="total-score-2"></span></p>
+            </div>
+          </div>
+        </div>
   </div>
-  <div class="col-sm-6">
-    <label for="player2role"><span="player2Name"></span></label>
-    <button type="button" id ="player2Role" name="button">Role!</button>
-    <button type="button" class="player2Hold" name="button">Ehh Ill Hold</button>
-  </div>
-
-    <button type="button" id= "new-game" name="button">New Game</button>
-</div>
-  <div class="results">
-    <p id="score"> </p>
-      </form>
-  </div>
-
 </body>
