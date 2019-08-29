@@ -1,25 +1,19 @@
 
+// Business Logic/-----------
 
+var playerOne = "";
+var playerTwo = "";
 
-var playerOne = function 
-var playerTwo =
+var roleDice = function() {
+  return Math.Floor(6*Math.Random())+1;
 
-var total= 0;
-var role = [2, 3, 4, 5, 6];
-role.forEach(function(role) {
-  total += role;
-});
-alert(total);
+}
 
+function Player(turn) {
+  this.roll = 0;
+  this.tempscore = 0;
+  this.totalscore = 0;
+  this.turn = turn;
+  this.playername;
 
-$(document).ready(function() {
-  $("#pigDice").submit(function(event) {
-    alert("hello");
-function myFunction() {
-  roleDice.addEventListerner ("button")
-  document.getElementById("score").ParseInt = (roleDice);
-   event.preventDefault();
-   console.log(".roleDice");
-    }
-  });
-});
+}
